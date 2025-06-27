@@ -1,25 +1,39 @@
-🌦️ Weather Dashboard
-A responsive weather application that displays current weather conditions for any city worldwide, built with HTML, CSS, and JavaScript.
-🛠️ Key Features & Technical Highlights
-API Integration: Successfully integrated with API-Ninjas Weather API through RapidAPI
+# 🌤️ Weather Dashboard 
 
-Dynamic UI: Real-time weather data display with responsive design
+*A responsive weather application built with HTML, CSS, and JavaScript*
 
-Location Services: Implemented geolocation to fetch weather for user's current position
+![Weather App Screenshot](./screenshot.png)
 
-Error Handling: Comprehensive error handling for API failures and invalid inputs
+## ✨ Features
 
-Performance: Optimized API calls with proper request headers and caching
+- **Real-time weather data** for any city worldwide
+- **Geolocation support** for automatic local weather detection
+- **Responsive design** that works on mobile and desktop
+- **Detailed metrics**: Temperature, humidity, wind speed, pressure
+- **Error handling** for invalid cities or API failures
 
-Cross-Browser: Tested on Chrome, Firefox, and Edge
+## 🛠️ Technical Implementation
 
-🔧 Technologies Used
-Frontend: HTML5, CSS3, JavaScript (ES6+)
+### API Integration
+- Integrated **API-Ninjas Weather API** via RapidAPI
+- Implemented proper authentication with `x-rapidapi-key` headers
+- Optimized API calls with error handling and fallbacks
 
-APIs:
+### Core Functionality
+- Dynamic UI updates without page refresh
+- Converted weather units (m/s → km/h)
+- Smart city name formatting (e.g., "kolkata" → "Kolkata,IN")
 
-API-Ninjas Weather API (via RapidAPI)
+### Technologies
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **APIs**: 
+  - API-Ninjas Weather API
+  - BigDataCloud (reverse geocoding)
+- **Tools**: Git, VS Code, Chrome DevTools
 
-BigDataCloud for reverse geocoding
+## 🚀 Installation
 
-Tools: Git, GitHub, Visual Studio Code
+```bash
+git clone https://github.com/your-username/weather-app.git
+cd weather-app
+open index.html
