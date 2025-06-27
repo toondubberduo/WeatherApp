@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherVision Pro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1><i class="fas fa-cloud-sun"></i> WeatherVision Pro</h1>
+      <p class="subtitle">Real-time Weather Analytics</p>
+    </header>
+
+    <main class="app-main">
+      <section class="control-panel">
+        <div class="search-container">
+          <input type="text" id="city-input" placeholder="Enter city name..." class="search-input">
+          <button id="search-btn" class="search-btn">
+            <i class="fas fa-search"></i> Search
+          </button>
+          <button id="location-btn" class="location-btn">
+            <i class="fas fa-location-arrow"></i>
+          </button>
+        </div>
+        <div class="unit-toggle">
+          <button id="unit-celsius" class="unit-btn active">°C</button>
+          <button id="unit-fahrenheit" class="unit-btn">°F</button>
+        </div>
+      </section>
+
+      <div class="loading-container" id="loading">
+        <div class="loading-spinner"></div>
+        <p>Loading weather data...</p>
+      </div>
+
+      <div class="error-display" id="error-display"></div>
+
+      <section class="weather-display" id="weather-display">
+        <div class="current-weather" id="current-weather">
+          <div class="location-info">
+            <h2 id="city-name">--</h2>
+            <p id="current-date">--</p>
+          </div>
+          <div class="weather-main">
+            <div id="current-temp">--°C</div>
+            <div class="weather-condition">
+              <img id="weather-icon" src="" alt="Weather icon">
+              <span id="weather-desc">--</span>
+            </div>
+          </div>
+
+          <div class="weather-details">
+            <div class="detail-card">
+              <i class="fas fa-temperature-high"></i>
+              <div class="detail-info">
+                <span>Feels Like</span>
+                <span id="feels-like">--°C</span>
+              </div>
+            </div>
+            <div class="detail-card">
+              <i class="fas fa-tint"></i>
+              <div class="detail-info">
+                <span>Humidity</span>
+                <span id="humidity">--%</span>
+              </div>
+            </div>
+            <div class="detail-card">
+              <i class="fas fa-wind"></i>
+              <div class="detail-info">
+                <span>Wind</span>
+                <span id="wind-speed">-- km/h</span>
+              </div>
+            </div>
+            <div class="detail-card">
+              <i class="fas fa-compress-alt"></i>
+              <div class="detail-info">
+                <span>Pressure</span>
+                <span id="pressure">-- hPa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>WeatherVision Pro © 2023 | Powered by API-Ninjas</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
